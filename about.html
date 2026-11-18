@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="История, структура и команда компании 1С-ИжТиСи.">
+<title>О компании — 1С-ИжТиСи</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='20' fill='%23FFC400'/%3E%3Ctext x='48' y='66' font-size='42' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23C21F17'%3E1%D0%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- общие определения: градиенты, фильтр тени, «фотография» Ижевска -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD23F"/><stop offset="1" stop-color="#FF9E00"/>
+    </linearGradient>
+    <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB347"/><stop offset=".55" stop-color="#FFD98A"/><stop offset="1" stop-color="#FFEFC4"/>
+    </linearGradient>
+    <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E7CFF"/><stop offset="1" stop-color="#123C8A"/>
+    </linearGradient>
+    <filter id="fDrop" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="4" dy="7" stdDeviation="6" flood-color="#221708" flood-opacity=".28"/>
+    </filter>
+    <!-- векторное «фото»: Ижевский пруд и плотина -->
+    <symbol id="city" viewBox="0 0 400 260">
+      <rect width="400" height="260" fill="url(#gSky)"/>
+      <circle cx="318" cy="62" r="30" fill="#FFC400"/>
+      <circle cx="318" cy="62" r="42" fill="#FFC400" opacity=".25"/>
+      <ellipse cx="90" cy="52" rx="42" ry="12" fill="#FFF6E3" opacity=".9"/>
+      <ellipse cx="150" cy="70" rx="30" ry="9" fill="#FFF6E3" opacity=".7"/>
+      <!-- завод -->
+      <rect x="20" y="120" width="150" height="60" fill="#3A2C14"/>
+      <rect x="34" y="86" width="14" height="40" fill="#3A2C14"/>
+      <rect x="64" y="72" width="14" height="54" fill="#3A2C14"/>
+      <circle cx="71" cy="62" r="8" fill="#FFF6E3" opacity=".8"/>
+      <circle cx="80" cy="48" r="11" fill="#FFF6E3" opacity=".55"/>
+      <circle cx="94" cy="34" r="14" fill="#FFF6E3" opacity=".35"/>
+      <g fill="#FFD23F"><rect x="32" y="132" width="12" height="12"/><rect x="54" y="132" width="12" height="12"/><rect x="76" y="132" width="12" height="12"/><rect x="98" y="132" width="12" height="12"/><rect x="120" y="132" width="12" height="12"/><rect x="32" y="152" width="12" height="12"/><rect x="76" y="152" width="12" height="12"/><rect x="120" y="152" width="12" height="12"/></g>
+      <!-- плотина -->
+      <rect x="170" y="150" width="70" height="30" fill="#6E5F45"/>
+      <rect x="170" y="146" width="70" height="6" fill="#8A7A58"/>
+      <!-- город справа -->
+      <rect x="250" y="110" width="26" height="70" fill="#4A3A1E"/>
+      <rect x="284" y="126" width="34" height="54" fill="#3A2C14"/>
+      <rect x="326" y="98" width="22" height="82" fill="#4A3A1E"/>
+      <path d="M337 98l11-26 11 26z" fill="#4A3A1E"/>
+      <rect x="360" y="132" width="30" height="48" fill="#3A2C14"/>
+      <!-- пруд -->
+      <path d="M0 180 Q100 168 200 180 T400 180 V260 H0 Z" fill="url(#gWater)"/>
+      <path d="M30 205 q20 -6 40 0 M120 220 q22 -6 44 0 M250 208 q20 -6 40 0 M320 228 q18 -6 36 0" stroke="#7FB4FF" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+      <circle cx="318" cy="200" r="14" fill="#FFC400" opacity=".5"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__prog" id="prog"></div>
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 96 96" width="42" height="42" aria-hidden="true">
+        <rect width="96" height="96" rx="20" fill="url(#gLogo)"/>
+        <path d="M96 0v28L68 0z" fill="#E8362D"/>
+        <text x="46" y="66" font-family="Arial Black,Arial" font-weight="900" font-size="44" fill="#C21F17" text-anchor="middle">1С</text>
+      </svg>
+      <span class="brand__txt">1С-ИжТиСи<small>Ижевск · партнёр фирмы «1С»</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html" class="active">О компании</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="studio.html">3D-студия</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="contacts.html" class="btn btn--s btn--red">Оставить заявку</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="phead">
+  <div class="wrap">
+    <span class="stamp rv">С 2011 года · Ижевск</span>
+    <h1 class="dsp rv">Компания, которая<br>говорит на языке 1С</h1>
+    <p class="rv">«1С-ИжТиСи» — «Ижевские Технологии и Сети». Мы автоматизируем предприятия Удмуртии:
+      от небольшой кофейни до завода с тысячей сотрудников. 40 специалистов, свой учебный центр и линия помощи 24/7.</p>
+  </div>
+</section>
+
+<!-- ================= ИСТОРИЯ ================= -->
+<section class="sec sec--paper">
+  <div class="wrap">
+    <div class="sec__head rv"><div><span class="stamp">История</span><h2 class="dsp">15 лет в цифрах и датах</h2></div></div>
+    <div class="tl" data-stag>
+      <div class="tl__i rv"><b class="dsp">2011</b><div><h3>Основание</h3><p>Три программиста и один бухгалтер открыли фирму в офисе на 20 м².</p></div></div>
+      <div class="tl__i rv"><b class="dsp">2014</b><div><h3>Статус «1С:Франчайзи»</h3><p>Официальное партнёрство с фирмой «1С». Первые 100 клиентов.</p></div></div>
+      <div class="tl__i rv"><b class="dsp">2017</b><div><h3>Учебный центр</h3><p>Открыли классы на 8 мест. За год обучили 260 бухгалтеров.</p></div></div>
+      <div class="tl__i rv"><b class="dsp">2020</b><div><h3>Поддержка 24/7</h3><p>Перевели линию консультаций на круглосуточный режим и удалённый доступ.</p></div></div>
+      <div class="tl__i rv"><b class="dsp">2023</b><div><h3>500-й клиент</h3><p>Крупнейший проект — 1С:ERP на заводе с 1 200 рабочими мест.</p></div></div>
+      <div class="tl__i rv"><b class="dsp">2026</b><div><h3>Облака</h3><p>Запустили направление 1С:Фреш: бухгалтерия в браузере без своего сервера.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СТРУКТУРА (интерактивная) ================= -->
+<section class="sec sec--cream">
+  <div class="wrap">
+    <div class="sec__head rv"><div><span class="stamp">Раздел 1 отчёта</span><h2 class="dsp">Структура предприятия</h2></div>
+      <span class="mono-note">нажмите на отдел</span></div>
+    <div class="org rv">
+      <div class="org__top dsp">Директор</div>
+      <div class="org__line" aria-hidden="true"></div>
+      <div class="org__depts" id="orgBtns">
+        <button class="dept" data-dept="impl">Отдел внедрения</button>
+        <button class="dept" data-dept="dev">Отдел разработки</button>
+        <button class="dept" data-dept="support">Линия консультаций</button>
+        <button class="dept" data-dept="edu">Учебный центр</button>
+        <button class="dept" data-dept="acc">Бухгалтерия</button>
+        <button class="dept" data-dept="adm">Администрация</button>
+      </div>
+      <div class="org__info" id="orgInfo">
+        <h3 id="orgTitle">Отдел внедрения</h3>
+        <p><b>Цель:</b> <span id="orgGoal"></span></p>
+        <ul id="orgTasks"></ul>
+        <p class="org__link"><b>Взаимосвязь:</b> <span id="orgLink"></span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= КОЛЛАЖ (векторный) ================= -->
+<section class="sec sec--paper">
+  <div class="wrap">
+    <div class="sec__head rv"><div><span class="stamp stamp--red">Раздел 2.3 отчёта</span><h2 class="dsp">Фирменный коллаж</h2></div>
+      <span class="mono-note">SVG · без потери качества</span></div>
+    <div class="art rv">
+      <svg viewBox="0 0 1000 560" role="img" aria-label="Коллаж: Ижевск, документы, код и графики">
+        <rect width="1000" height="560" rx="18" fill="#FFFBEE"/>
+        <g opacity=".5" stroke="#E4D5B0"><path d="M0 80h1000M0 160h1000M0 240h1000M0 320h1000M0 400h1000M0 480h1000"/></g>
+
+        <!-- фото в рамке -->
+        <g transform="rotate(-2 260 210)" filter="url(#fDrop)">
+          <rect x="60" y="60" width="400" height="300" rx="6" fill="#fff"/>
+          <svg x="76" y="76" width="368" height="240" viewBox="0 0 400 260"><use href="#city"/></svg>
+          <text x="260" y="344" text-anchor="middle" font-family="Consolas,monospace" font-size="17" fill="#6E5F45">Ижевский пруд · наш город</text>
+          <rect x="215" y="44" width="90" height="26" fill="#FFD23F" opacity=".85" transform="rotate(3 260 57)"/>
+        </g>
+
+        <!-- счёт -->
+        <g transform="rotate(3 700 190)" filter="url(#fDrop)">
+          <rect x="540" y="70" width="320" height="240" rx="8" fill="#FFFDF4" stroke="#221708" stroke-width="2"/>
+          <text x="560" y="104" font-family="Arial Black,Arial" font-weight="900" font-size="20" fill="#221708">СЧЁТ № 000482</text>
+          <g stroke="#E4D5B0" stroke-width="2"><path d="M560 122h280M560 152h280M560 182h280M560 212h280"/></g>
+          <g font-family="Consolas,monospace" font-size="14" fill="#3A2C14">
+            <text x="560" y="144">Внедрение 1С:Бухгалтерия</text><text x="840" y="144" text-anchor="end">25 000</text>
+            <text x="560" y="174">Настройка, 6 мест</text><text x="840" y="174" text-anchor="end">6 000</text>
+            <text x="560" y="204">ИТС ПРОФ, 12 мес</text><text x="840" y="204" text-anchor="end">48 960</text>
+          </g>
+          <text x="560" y="248" font-family="Arial Black,Arial" font-weight="900" font-size="18" fill="#221708">ИТОГО:</text>
+          <text x="840" y="248" text-anchor="end" font-family="Arial Black,Arial" font-weight="900" font-size="18" fill="#C21F17">79 960 ₽</text>
+          <g transform="rotate(-12 760 268)">
+            <circle cx="760" cy="268" r="44" fill="none" stroke="#E8362D" stroke-width="3"/>
+            <circle cx="760" cy="268" r="36" fill="none" stroke="#E8362D" stroke-width="1.5"/>
+            <text x="760" y="274" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="14" fill="#E8362D">ОПЛАЧЕНО</text>
+            <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="2.6s" repeatCount="indefinite" additive="sum"/>
+          </g>
+        </g>
+
+        <!-- окно кода -->
+        <g transform="rotate(-1 330 450)" filter="url(#fDrop)">
+          <rect x="120" y="380" width="420" height="150" rx="10" fill="#241A0B"/>
+          <circle cx="144" cy="402" r="5" fill="#E8362D"/><circle cx="162" cy="402" r="5" fill="#FFC400"/><circle cx="180" cy="402" r="5" fill="#59C93B"/>
+          <g font-family="Consolas,monospace" font-size="15">
+            <text x="140" y="436" fill="#FF7A6E">Процедура <tspan fill="#FFD23F">ЗакрытьМесяц</tspan><tspan fill="#F3E7C8">()</tspan></text>
+            <text x="140" y="462" fill="#F3E7C8">    Отчётность.<tspan fill="#FFD23F">СдатьВсё</tspan>(<tspan fill="#8FE06A">"вовремя"</tspan>);</text>
+            <text x="140" y="488" fill="#F3E7C8">    Бухгалтер.<tspan fill="#FFD23F">Отдохнуть</tspan>();</text>
+            <text x="140" y="514" fill="#8A7A58">// ошибок: 0 · строк: 3</text>
+          </g>
+        </g>
+
+        <!-- график -->
+        <g transform="rotate(2 760 440)" filter="url(#fDrop)">
+          <rect x="600" y="350" width="330" height="180" rx="10" fill="#fff" stroke="#221708" stroke-width="2"/>
+          <text x="620" y="382" font-family="Arial Black,Arial" font-weight="900" font-size="16" fill="#221708">ПРИБЫЛЬ КЛИЕНТОВ</text>
+          <rect x="624" y="470" width="26" height="40" fill="#FFC400"/>
+          <rect x="664" y="450" width="26" height="60" fill="#FF9E00"/>
+          <rect x="704" y="428" width="26" height="82" fill="#E8362D"/>
+          <rect x="744" y="410" width="26" height="100" fill="#2E7CFF"/>
+          <polyline points="637,462 677,442 717,420 757,402 800,384 880,368" fill="none" stroke="#3E9E24" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="880" cy="368" r="6" fill="#3E9E24"><animate attributeName="r" values="6;9;6" dur="1.8s" repeatCount="indefinite"/></circle>
+          <text x="856" y="356" font-family="Consolas,monospace" font-size="15" fill="#3E9E24">+38%</text>
+        </g>
+
+        <!-- стикер -->
+        <g transform="rotate(6 920 90)" filter="url(#fDrop)">
+          <rect x="866" y="36" width="112" height="112" fill="#FFD23F"/>
+          <text x="922" y="80" text-anchor="middle" font-family="Consolas,monospace" font-size="14" fill="#221708">не забыть</text>
+          <text x="922" y="100" text-anchor="middle" font-family="Consolas,monospace" font-size="14" fill="#221708">обновить</text>
+          <text x="922" y="120" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="16" fill="#C21F17">ЗУП!</text>
+          <animateTransform attributeName="transform" type="rotate" values="6 920 90;9 920 90;6 920 90" dur="4s" repeatCount="indefinite"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ДО / ПОСЛЕ ================= -->
+<section class="sec sec--cream">
+  <div class="wrap">
+    <div class="sec__head rv"><div><span class="stamp">Фотокоррекция</span><h2 class="dsp">Обработка изображения</h2></div>
+      <span class="mono-note">тяните ползунок · стрелки ← → тоже работают</span></div>
+    <div class="ba rv" id="ba">
+      <div class="ba__layer ba__before"><svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice"><use href="#city"/></svg></div>
+      <div class="ba__layer ba__after" id="baAfter"><svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice"><use href="#city"/></svg></div>
+      <span class="ba__tag ba__tag--l">ДО</span>
+      <span class="ba__tag ba__tag--r">ПОСЛЕ</span>
+      <div class="ba__handle" id="baHandle"><span>⟷</span></div>
+      <input type="range" min="0" max="100" value="50" id="baRange" class="ba__range" aria-label="Сравнение до и после обработки">
+    </div>
+    <p class="ba__note rv">Слева — исходник: холодный и тусклый. Справа — фирменная коррекция: тёплый тон, контраст и насыщенность в палитре 1С.</p>
+  </div>
+</section>
+
+<!-- ================= КОМАНДА ================= -->
+<section class="sec sec--paper">
+  <div class="wrap">
+    <div class="sec__head rv"><div><span class="stamp">Люди</span><h2 class="dsp">Руководители направлений</h2></div></div>
+    <div class="grid4" data-stag>
+      <div class="tcard rv">
+        <svg viewBox="0 0 96 96" class="ava"><circle cx="48" cy="48" r="46" fill="url(#gLogo)"/><text x="48" y="62" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="34" fill="#C21F17">АП</text></svg>
+        <h3>Андрей Пастухов</h3><p class="trole">Директор</p><p>1С-специалист с 2005 года. Отвечает за стратегию и крупных клиентов.</p>
+      </div>
+      <div class="tcard rv">
+        <svg viewBox="0 0 96 96" class="ava"><circle cx="48" cy="48" r="46" fill="#2E7CFF"/><text x="48" y="62" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="34" fill="#fff">МК</text></svg>
+        <h3>Мария Ковалёва</h3><p class="trole">Руководитель внедрения</p><p>Провела 120+ запусков. Знает бухгалтерию лучше многих бухгалтеров.</p>
+      </div>
+      <div class="tcard rv">
+        <svg viewBox="0 0 96 96" class="ava"><circle cx="48" cy="48" r="46" fill="#E8362D"/><text x="48" y="62" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="34" fill="#fff">СД</text></svg>
+        <h3>Сергей Данилов</h3><p class="trole">Ведущий программист</p><p>Сертификат «1С:Специалист». Пишет обработки, которые экономят часы.</p>
+      </div>
+      <div class="tcard rv">
+        <svg viewBox="0 0 96 96" class="ava"><circle cx="48" cy="48" r="46" fill="#3E9E24"/><text x="48" y="62" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="34" fill="#fff">ОТ</text></svg>
+        <h3>Ольга Ткачева</h3><p class="trole">Руководитель линии помощи</p><p>Её команда отвечает за 30 секунд. Наставник учебного центра.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap fgrid">
+    <div class="fcol">
+      <a class="brand brand--f" href="index.html">
+        <svg viewBox="0 0 96 96" width="38" height="38" aria-hidden="true"><rect width="96" height="96" rx="20" fill="url(#gLogo)"/><path d="M96 0v28L68 0z" fill="#E8362D"/><text x="46" y="66" font-family="Arial Black,Arial" font-weight="900" font-size="44" fill="#C21F17" text-anchor="middle">1С</text></svg>
+        <span class="brand__txt">1С-ИжТиСи</span>
+      </a>
+      <p class="fstatus"><span class="pulse-dot" aria-hidden="true"></span>Серверы 1С работают штатно</p>
+      <p class="fmuted">ООО «1С-ИжТиСи» · ИНН 1831000000<br>Учебный макет сайта, <span class="yr">2026</span></p>
+    </div>
+    <div class="fcol"><h4>Разделы</h4><a href="about.html">О компании</a><a href="services.html">Услуги и цены</a><a href="services.html#calc">Калькулятор</a><a href="studio.html">3D-студия</a></div>
+    <div class="fcol"><h4>Услуги</h4><a href="services.html#srv">Внедрение 1С</a><a href="services.html#tariffs">Сопровождение ИТС</a><a href="services.html#srv">Доработка и обучение</a></div>
+    <div class="fcol"><h4>Контакты</h4><a href="tel:+73412551010">+7 (3412) 55-10-10</a><a href="mailto:info@izhtisi.ru">info@izhtisi.ru</a><p class="fmuted">г. Ижевск, ул. Пушкинская, 142<br>Пн–Пт 9:00–18:00</p></div>
+  </div>
+  <div class="wrap fbot"><span>© <span class="yr">2026</span> 1С-ИжТиСи · Ижевск</span><span class="mono">сделано с ♥ и без единого растрового пикселя</span></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

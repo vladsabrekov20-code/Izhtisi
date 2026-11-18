@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Контакты 1С-ИжТиСи: заявка, телефон, адрес в Ижевске.">
+<title>Контакты — 1С-ИжТиСи</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='20' fill='%23FFC400'/%3E%3Ctext x='48' y='66' font-size='42' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23C21F17'%3E1%D0%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="gLogo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD23F"/><stop offset="1" stop-color="#FF9E00"/></linearGradient></defs>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__prog" id="prog"></div>
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 96 96" width="42" height="42" aria-hidden="true"><rect width="96" height="96" rx="20" fill="url(#gLogo)"/><path d="M96 0v28L68 0z" fill="#E8362D"/><text x="46" y="66" font-family="Arial Black,Arial" font-weight="900" font-size="44" fill="#C21F17" text-anchor="middle">1С</text></svg>
+      <span class="brand__txt">1С-ИжТиСи<small>Ижевск · партнёр фирмы «1С»</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="studio.html">3D-студия</a>
+      <a href="contacts.html" class="active">Контакты</a>
+      <a href="contacts.html" class="btn btn--s btn--red">Оставить заявку</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="phead">
+  <div class="wrap">
+    <span class="stamp rv">Ответим за 2 часа в рабочее время</span>
+    <h1 class="dsp rv">Давайте знакомиться</h1>
+    <p class="rv">Оставьте заявку — перезвоним, зададим пару вопросов и предложим план. Консультация бесплатная и ни к чему не обязывает.</p>
+  </div>
+</section>
+
+<section class="sec sec--paper">
+  <div class="wrap cgrid">
+
+    <!-- ФОРМА -->
+    <div class="formcard rv">
+      <div id="formWrap">
+        <h2 class="dsp">Заявка</h2>
+        <form id="reqForm" novalidate>
+          <label class="field"><span>Ваше имя *</span>
+            <input type="text" id="fName" autocomplete="name" placeholder="Как к вам обращаться">
+            <small class="f-err" id="eName"></small></label>
+          <div class="frow">
+            <label class="field"><span>Телефон</span>
+              <input type="tel" id="fPhone" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+              <small class="f-err" id="ePhone"></small></label>
+            <label class="field"><span>E-mail</span>
+              <input type="email" id="fMail" autocomplete="email" placeholder="you@mail.ru">
+              <small class="f-err" id="eMail"></small></label>
+          </div>
+          <p class="f-note">Достаточно телефона <b>или</b> почты — как удобнее.</p>
+          <label class="field"><span>Сообщение</span>
+            <textarea id="fMsg" rows="4" placeholder="Что хотите автоматизировать?"></textarea></label>
+          <label class="check"><input type="checkbox" id="fOk"><span>Согласен на обработку персональных данных *</span></label>
+          <small class="f-err" id="eOk"></small>
+          <button class="btn btn--red btn--wide" type="submit">Отправить заявку →</button>
+        </form>
+      </div>
+      <div id="doneWrap" class="done" hidden>
+        <div class="done__stamp dsp">ПРИНЯТО ✓</div>
+        <h2 class="dsp">Заявка <span id="doneNum">ИЖ-00000</span> у нас!</h2>
+        <p>Специалист свяжется с вами в течение 2 рабочих часов. Номер заявки сохранён в списке ниже.</p>
+        <button class="btn btn--ghost" id="newReq" type="button">Создать ещё одну</button>
+      </div>
+    </div>
+
+    <!-- ИНФО -->
+    <aside class="info rv">
+      <div class="info__i"><h4>Телефон</h4><a class="info__big" href="tel:+73412551010">+7 (3412) 55-10-10</a><p>Линия помощи — круглосуточно</p></div>
+      <div class="info__i"><h4>Почта</h4><a class="info__big" href="mailto:info@izhtisi.ru">info@izhtisi.ru</a><p>Отвечаем в течение рабочего дня</p></div>
+      <div class="info__i"><h4>Офис</h4><p class="info__big">Ижевск, ул. Пушкинская, 142</p><p id="openState"><span class="open-dot"></span>…</p></div>
+      <div class="mapbox">
+        <svg viewBox="0 0 400 240" role="img" aria-label="Схема: офис у Ижевского пруда">
+          <rect width="400" height="240" fill="#FFF6E3"/>
+          <path d="M0 150 Q120 120 220 150 T400 140 V240 H0 Z" fill="#2E7CFF" opacity=".85"/>
+          <path d="M0 150 Q120 120 220 150 T400 140" fill="none" stroke="#1D5FD6" stroke-width="3"/>
+          <g stroke="#E4D5B0" stroke-width="8"><path d="M60 0v150M160 0v140M260 0v150M340 0v140M0 60h400M0 110h400"/></g>
+          <g stroke="#FFFDF4" stroke-width="2" stroke-dasharray="8 8"><path d="M60 0v150M160 0v140M260 0v150M0 60h400"/></g>
+          <text x="330" y="205" font-family="Consolas,monospace" font-size="14" fill="#fff">Ижевский пруд</text>
+          <g>
+            <circle cx="220" cy="92" r="20" fill="#E8362D" opacity=".25"><animate attributeName="r" values="14;26;14" dur="2s" repeatCount="indefinite"/></circle>
+            <path d="M220 62c-12 0-20 9-20 19 0 14 20 31 20 31s20-17 20-31c0-10-8-19-20-19z" fill="#E8362D"/>
+            <circle cx="220" cy="81" r="7" fill="#FFF6E3"/>
+          </g>
+          <text x="220" y="46" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="14" fill="#221708">Пушкинская, 142</text>
+        </svg>
+        <a class="btn btn--ghost btn--s btn--wide" href="https://yandex.ru/maps/?text=Ижевск%2C%20Пушкинская%20142" target="_blank" rel="noopener">Открыть в Яндекс.Картах ↗</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- МОИ ЗАЯВКИ -->
+  <div class="wrap wrap--narrow reqwrap rv">
+    <h3 class="dsp">Ваши заявки <span class="mono-note">(хранятся в этом браузере)</span></h3>
+    <ul class="reqlist" id="reqList"></ul>
+    <p class="fmuted" id="reqEmpty">Пока пусто — отправьте первую заявку выше.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap fgrid">
+    <div class="fcol">
+      <a class="brand brand--f" href="index.html">
+        <svg viewBox="0 0 96 96" width="38" height="38" aria-hidden="true"><rect width="96" height="96" rx="20" fill="url(#gLogo)"/><path d="M96 0v28L68 0z" fill="#E8362D"/><text x="46" y="66" font-family="Arial Black,Arial" font-weight="900" font-size="44" fill="#C21F17" text-anchor="middle">1С</text></svg>
+        <span class="brand__txt">1С-ИжТиСи</span>
+      </a>
+      <p class="fstatus"><span class="pulse-dot" aria-hidden="true"></span>Серверы 1С работают штатно</p>
+      <p class="fmuted">ООО «1С-ИжТиСи» · ИНН 1831000000<br>Учебный макет сайта, <span class="yr">2026</span></p>
+    </div>
+    <div class="fcol"><h4>Разделы</h4><a href="about.html">О компании</a><a href="services.html">Услуги и цены</a><a href="services.html#calc">Калькулятор</a><a href="studio.html">3D-студия</a></div>
+    <div class="fcol"><h4>Услуги</h4><a href="services.html#srv">Внедрение 1С</a><a href="services.html#tariffs">Сопровождение ИТС</a><a href="services.html#srv">Доработка и обучение</a></div>
+    <div class="fcol"><h4>Контакты</h4><a href="tel:+73412551010">+7 (3412) 55-10-10</a><a href="mailto:info@izhtisi.ru">info@izhtisi.ru</a><p class="fmuted">г. Ижевск, ул. Пушкинская, 142<br>Пн–Пт 9:00–18:00</p></div>
+  </div>
+  <div class="wrap fbot"><span>© <span class="yr">2026</span> 1С-ИжТиСи · Ижевск</span><span class="mono">сделано с ♥ и без единого растрового пикселя</span></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

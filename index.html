@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="1С-ИжТиСи — внедрение и сопровождение 1С в Ижевске. Официальный партнёр фирмы 1С.">
+<title>1С-ИжТиСи — автоматизация бизнеса в Ижевске</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='20' fill='%23FFC400'/%3E%3Ctext x='48' y='66' font-size='42' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23C21F17'%3E1%D0%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- общие градиенты для логотипа -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD23F"/><stop offset="1" stop-color="#FF9E00"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__prog" id="prog"></div>
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 96 96" width="42" height="42" aria-hidden="true">
+        <rect width="96" height="96" rx="20" fill="url(#gLogo)"/>
+        <path d="M96 0v28L68 0z" fill="#E8362D"/>
+        <text x="46" y="66" font-family="Arial Black,Arial" font-weight="900" font-size="44" fill="#C21F17" text-anchor="middle">1С</text>
+      </svg>
+      <span class="brand__txt">1С-ИжТиСи<small>Ижевск · партнёр фирмы «1С»</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="active">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="studio.html">3D-студия</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="contacts.html" class="btn btn--s btn--red">Оставить заявку</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= ГЕРОЙ + ЖИВОЙ РЕДАКТОР 1С ================= -->
+<section class="hero" id="hero">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__left">
+      <span class="overline rv">● Официальный партнёр фирмы «1С» с 2011 года</span>
+      <h1 class="dsp rv">Наведём <span class="hl">порядок</span><br>в вашем бизнесе</h1>
+      <p class="typer-line rv">Автоматизируем: <span id="typer"></span><span class="caret">▌</span></p>
+      <p class="hero__sub rv">Внедряем, дорабатываем и сопровождаем программы 1С.
+        Считаем налоги без ошибок, платим зарплату вовремя, видим склад в реальном времени.</p>
+      <div class="hero__cta rv">
+        <a class="btn" href="services.html#calc">Рассчитать стоимость</a>
+        <a class="btn btn--ghost" href="studio.html">Смотреть 3D-визитку</a>
+      </div>
+      <div class="trust rv" data-stag>
+        <div class="trust__i rv"><b>15 лет</b><span>на рынке ИТ</span></div>
+        <div class="trust__i rv"><b>500+</b><span>клиентов</span></div>
+        <div class="trust__i rv"><b>24/7</b><span>поддержка</span></div>
+      </div>
+    </div>
+
+    <div class="hero__right rv">
+      <div class="fchip f1" data-depth="18">📄 Реализация № 000482</div>
+      <div class="fchip f2" data-depth="30">🧮 1С:ЗУП</div>
+      <div class="fchip f3" data-depth="24">🏭 1С:ERP</div>
+
+      <div class="code">
+        <div class="code__bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="code__tab">ОбщийМодуль.РостБизнеса</span>
+        </div>
+        <div class="code__body" id="codeBody"></div>
+      </div>
+
+      <div class="res" id="resCard">
+        <div class="res__stamp dsp">ПРОВЕДЕНО ✓</div>
+        <p class="res__t">Отчёт за квартал</p>
+        <p class="res__n">Прибыль <b>+38%</b></p>
+        <svg viewBox="0 0 160 44" class="spark" aria-hidden="true">
+          <polyline points="4,38 28,32 52,34 76,24 100,26 124,12 156,6"
+            fill="none" stroke="#3E9E24" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- бегущая строка продуктов -->
+<div class="tick" aria-hidden="true">
+  <div class="tick__row">
+    <span>1С:Бухгалтерия ✦ 1С:Зарплата и управление персоналом ✦ 1С:Управление торговлей ✦ 1С:ERP ✦ 1С:Документооборот ✦ 1С:Фреш ✦ ИТС ПРОФ ✦ </span>
+    <span>1С:Бухгалтерия ✦ 1С:Зарплата и управление персоналом ✦ 1С:Управление торговлей ✦ 1С:ERP ✦ 1С:Документооборот ✦ 1С:Фреш ✦ ИТС ПРОФ ✦ </span>
+  </div>
+</div>
+
+<!-- ================= УСЛУГИ (превью) ================= -->
+<section class="sec sec--paper">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <div>
+        <span class="stamp">Раздел услуг</span>
+        <h2 class="dsp">Что мы делаем</h2>
+      </div>
+      <a class="btn btn--ghost btn--s" href="services.html">Все услуги и цены →</a>
+    </div>
+    <div class="grid4" data-stag>
+      <a class="scard rv" href="services.html#srv">
+        <svg class="scard__ico" viewBox="0 0 48 48"><path class="draw" d="M8 16l16-8 16 8-16 8zM8 16v16l16 8 16-8V16M24 24v16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <h3>Внедрение 1С</h3>
+        <p>Установим, настроим и перенесём ваши данные. Запуск — от 5 рабочих дней.</p>
+        <span class="scard__price">от 25 000 ₽</span>
+      </a>
+      <a class="scard rv" href="services.html#tariffs">
+        <svg class="scard__ico" viewBox="0 0 48 48"><path class="draw" d="M24 6l14 6v10c0 9-6 15-14 20-8-5-14-11-14-20V12zM17 24l5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Сопровождение ИТС</h3>
+        <p>Обновления, консультации и линия помощи. Отчётность сдаётся вовремя.</p>
+        <span class="scard__price">от 2 300 ₽/мес</span>
+      </a>
+      <a class="scard rv" href="services.html#srv">
+        <svg class="scard__ico" viewBox="0 0 48 48"><path class="draw" d="M16 14l-9 10 9 10M32 14l9 10-9 10M27 10l-6 28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Доработка под вас</h3>
+        <p>Отчёты, печатные формы и обработки под задачи именно вашей компании.</p>
+        <span class="scard__price">2 600 ₽/час</span>
+      </a>
+      <a class="scard rv" href="services.html#srv">
+        <svg class="scard__ico" viewBox="0 0 48 48"><path class="draw" d="M24 8L4 18l20 10 16-8v12M12 24v10c0 3 5 6 12 6s12-3 12-6V24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Обучение</h3>
+        <p>Учебный центр: курсы для бухгалтеров, кадровиков и кладовщиков.</p>
+        <span class="scard__price">от 1 900 ₽/чел</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЦИФРЫ ================= -->
+<section class="sec sec--dark">
+  <div class="wrap stats" data-stag>
+    <div class="stat rv"><span class="stat__n dsp"><span data-count="15">0</span></span><span class="stat__l">лет работы</span></div>
+    <div class="stat rv"><span class="stat__n dsp"><span data-count="500">0</span>+</span><span class="stat__l">компаний-клиентов</span></div>
+    <div class="stat rv"><span class="stat__n dsp"><span data-count="40">0</span></span><span class="stat__l">специалистов в штате</span></div>
+    <div class="stat rv"><span class="stat__n dsp"><span data-count="12000">0</span>+</span><span class="stat__l">закрытых задач</span></div>
+  </div>
+</section>
+
+<!-- ================= РЕКЛАМНЫЙ БАННЕР (JS) ================= -->
+<section class="sec sec--cream">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <div>
+        <span class="stamp stamp--red">Акции декабря</span>
+        <h2 class="dsp">Выгодные предложения</h2>
+      </div>
+      <span class="mono-note">баннер · JavaScript-ротация</span>
+    </div>
+
+    <div class="ad rv" id="ad">
+      <!-- слайд 1 -->
+      <div class="ad__s s1 on">
+        <div class="ad__in">
+          <span class="ad__badge">−20%</span>
+          <div>
+            <h3 class="dsp">ИТС ПРОФ со скидкой</h3>
+            <p>Годовое сопровождение выгоднее. Успейте до конца декабря!</p>
+            <div class="cd" aria-label="До конца акции">
+              <span class="cd__i"><b id="cdD">00</b>дн</span>
+              <span class="cd__i"><b id="cdH">00</b>ч</span>
+              <span class="cd__i"><b id="cdM">00</b>мин</span>
+              <span class="cd__i"><b id="cdS">00</b>с</span>
+            </div>
+            <a class="btn btn--s" href="services.html#tariffs">Подключить ИТС</a>
+          </div>
+        </div>
+        <svg class="ad__deco" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 8"/><text x="50" y="60" text-anchor="middle" font-size="30" font-weight="900" fill="#fff">%</text></svg>
+      </div>
+      <!-- слайд 2 -->
+      <div class="ad__s s2">
+        <div class="ad__in">
+          <span class="ad__badge ad__badge--blue">ERP</span>
+          <div>
+            <h3 class="dsp">Переход на 1С:ERP</h3>
+            <p>Аудит процессов — бесплатно. Покажем, где теряются деньги.</p>
+            <a class="btn btn--s" href="contacts.html">Заказать аудит</a>
+          </div>
+        </div>
+        <svg class="ad__deco" viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="52" width="18" height="34" fill="#7FB4FF"/><rect x="40" y="36" width="18" height="50" fill="#B9D4FF"/><rect x="66" y="18" width="18" height="68" fill="#fff"/></svg>
+      </div>
+      <!-- слайд 3 -->
+      <div class="ad__s s3">
+        <div class="ad__in">
+          <span class="ad__badge ad__badge--green">КУРС</span>
+          <div>
+            <h3 class="dsp">1С:Бухгалтерия с нуля</h3>
+            <p>Вечерний курс в нашем учебном центре. Группы до 8 человек.</p>
+            <a class="btn btn--s" href="services.html#srv">Записаться</a>
+          </div>
+        </div>
+        <svg class="ad__deco" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 22L10 40l40 18 32-14v22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M28 52v14c0 6 10 10 22 10s22-4 22-10V52" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="ad__ui">
+        <div class="ad__dots" id="adDots"></div>
+        <span class="ad__num mono" id="adNum">1 / 3</span>
+        <button class="ad__pause" id="adPause" aria-pressed="false" aria-label="Пауза баннера">⏸</button>
+      </div>
+      <div class="ad__bar"><span id="adBar"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЧЕМУ МЫ ================= -->
+<section class="sec sec--paper">
+  <div class="wrap">
+    <div class="sec__head rv"><div><span class="stamp">Гарантии</span><h2 class="dsp">Почему выбирают нас</h2></div></div>
+    <div class="grid3" data-stag>
+      <div class="feat rv">
+        <b class="feat__n dsp">01</b>
+        <h3>Отвечаем быстро</h3>
+        <p>Линия консультаций берёт трубку за 30 секунд. Критичные задачи решаем в день обращения — работаем 24/7.</p>
+      </div>
+      <div class="feat rv">
+        <b class="feat__n dsp">02</b>
+        <h3>Фиксируем цену</h3>
+        <p>Смета до начала работ. Часы прозрачны: вы видите каждый отчёт специалиста в личном кабинете.</p>
+      </div>
+      <div class="feat rv">
+        <b class="feat__n dsp">03</b>
+        <h3>Не бросаем после запуска</h3>
+        <p>Обновления, отчётность и обучение новых сотрудников — всё сопровождение в одном договоре.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПРИЗЫВ ================= -->
+<section class="cta-band">
+  <div class="wrap cta-band__in rv">
+    <h2 class="dsp">Узнайте стоимость за одну минуту</h2>
+    <p>Калькулятор посчитает внедрение и сопровождение под ваши рабочие места.</p>
+    <div class="hero__cta">
+      <a class="btn btn--ink" href="services.html#calc">Открыть калькулятор</a>
+      <a class="btn btn--ghostlight" href="contacts.html">Задать вопрос</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap fgrid">
+    <div class="fcol">
+      <a class="brand brand--f" href="index.html">
+        <svg viewBox="0 0 96 96" width="38" height="38" aria-hidden="true">
+          <rect width="96" height="96" rx="20" fill="url(#gLogo)"/>
+          <path d="M96 0v28L68 0z" fill="#E8362D"/>
+          <text x="46" y="66" font-family="Arial Black,Arial" font-weight="900" font-size="44" fill="#C21F17" text-anchor="middle">1С</text>
+        </svg>
+        <span class="brand__txt">1С-ИжТиСи</span>
+      </a>
+      <p class="fstatus"><span class="pulse-dot" aria-hidden="true"></span>Серверы 1С работают штатно</p>
+      <p class="fmuted">ООО «1С-ИжТиСи» · ИНН 1831000000<br>Учебный макет сайта, <span class="yr">2026</span></p>
+    </div>
+    <div class="fcol">
+      <h4>Разделы</h4>
+      <a href="about.html">О компании</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="services.html#calc">Калькулятор</a>
+      <a href="studio.html">3D-студия</a>
+    </div>
+    <div class="fcol">
+      <h4>Услуги</h4>
+      <a href="services.html#srv">Внедрение 1С</a>
+      <a href="services.html#tariffs">Сопровождение ИТС</a>
+      <a href="services.html#srv">Доработка и обучение</a>
+    </div>
+    <div class="fcol">
+      <h4>Контакты</h4>
+      <a href="tel:+73412551010">+7 (3412) 55-10-10</a>
+      <a href="mailto:info@izhtisi.ru">info@izhtisi.ru</a>
+      <p class="fmuted">г. Ижевск, ул. Пушкинская, 142<br>Пн–Пт 9:00–18:00</p>
+    </div>
+  </div>
+  <div class="wrap fbot">
+    <span>© <span class="yr">2026</span> 1С-ИжТиСи · Ижевск</span>
+    <span class="mono">сделано с ♥ и без единого растрового пикселя</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="banner.js"></script>
+</body>
+</html>
